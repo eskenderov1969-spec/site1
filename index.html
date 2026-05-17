@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Официальный сайт</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: black;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .blob {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      filter: blur(120px);
+      opacity: 0.4;
+      border-radius: 50%;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-30px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .btn {
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- фон -->
+<div class="blob" style="background: cyan; top: 0; left: 0;"></div>
+<div class="blob" style="background: purple; bottom: 0; right: 0;"></div>
+
+<!-- контент -->
+<div style="position: relative; z-index: 10; padding: 40px;">
+
+  <h1 style="font-size: 40px; color: cyan;">
+    Официальный сайт
+  </h1>
+
+  <p style="color: #aaa; max-width: 500px;">
+    Персональный сайт с информацией об авторе
+  </p>
+
+  <hr style="margin: 30px 0; opacity: 0.2;" />
+
+  <h2>Автор:</h2>
+
+  <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 20px;">
+    <h3 style="color: cyan;">Эскендеров Эмируллах Габибулахович</h3>
+    <p>Студент ДГУНХ</p>
+    <p>📞 +7 (928) 218-55-70</p>
+  </div>
+
+  <div style="margin-top: 30px; display: flex; gap: 15px; flex-wrap: wrap;">
+
+    <a class="btn" href="https://t.me/USERNAME"
+       style="background: cyan; color: black; padding: 12px 20px; border-radius: 12px; text-decoration: none;">
+      Telegram
+    </a>
+
+    <a class="btn" href="https://wa.me/79282185570"
+       style="background: green; color: white; padding: 12px 20px; border-radius: 12px; text-decoration: none;">
+      WhatsApp
+    </a>
+
+  </div>
+
+</div>
+
+</body>
+</html>
