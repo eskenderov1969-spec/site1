@@ -224,3 +224,241 @@ projectCards.forEach(card => {
     });
 
 });
+/* =====================================================
+   USER AUTHENTICATION
+===================================================== */
+
+
+/* ---------- REGISTRATION ---------- */
+
+const registerForm = document.getElementById("registerForm");
+
+if (registerForm) {
+
+    registerForm.addEventListener("submit", (event) => {
+
+        event.preventDefault();
+
+        const name =
+            document.getElementById("registerName").value.trim();
+
+        const email =
+            document.getElementById("registerEmail").value.trim();
+
+        const password =
+            document.getElementById("registerPassword").value;
+
+        const message =
+            document.getElementById("registerMessage");
+
+
+        if (password.length < 6) {
+
+            message.textContent =
+                "Пароль должен содержать минимум 6 символов.";
+
+            return;
+        }
+
+
+        const existingUser =
+            JSON.parse(localStorage.getItem("portfolioUser"));
+
+
+        if (
+            existingUser &&
+            existingUser.email.toLowerCase() === email.toLowerCase()
+        ) {
+
+            message.textContent =
+                "Пользователь с таким Email уже существует.";
+
+            return;
+        }
+
+
+        const user = {
+            name: name,
+            email: email,
+            password: password
+        };
+
+
+        localStorage.setItem(
+            "portfolioUser",
+            JSON.stringify(user)
+        );
+
+
+        message.style.color = "#7ee787";
+
+        message.textContent =
+            "Регистрация успешна! Переходим ко входу...";
+
+
+        setTimeout(() => {
+
+            window.location.href = "login.html";
+
+        }, 1200);
+
+    });
+
+}
+
+
+/* ---------- LOGIN ---------- */
+
+const loginForm = document.getElementById("loginForm");
+
+if (loginForm) {
+
+    loginForm.addEventListener("submit", (event) => {
+
+        event.preventDefault();
+
+        const email =
+            document.getElementById("loginEmail").value.trim();
+
+        const password =
+            document.getElementById("loginPassword").value;
+
+        const message =
+            document.getElementById("loginMessage");
+
+
+        const user =
+            JSON.parse(localStorage.getItem("portfolioUser"));
+
+
+        if (!user) {
+
+            message.textContent =
+                "Аккаунт не найден. Сначала зарегистрируйтесь.";
+
+            return;
+        }
+
+
+        if (
+            user.email.toLowerCase() !== email.toLowerCase() ||
+            user.password !== password
+        ) {
+
+            message.textContent =
+                "Неверный Email или пароль.";
+
+            return;
+        }
+
+
+        localStorage.setItem(
+            "portfolioLoggedIn",
+            "true"
+        );
+
+
+        message.style.color = "#7ee787";
+
+        message.textContent =
+            "Вход выполнен. Загружаем кабинет...";
+
+
+        setTimeout(() => {
+
+            window.location.href = "profile.html";
+
+        }, 800);
+
+    });
+
+}
+
+
+/* ---------- PROFILE ---------- */
+
+const profileName =
+    document.getElementById("profileName");
+
+if (profileName) {
+
+    const loggedIn =
+        localStorage.getItem("portfolioLoggedIn");
+
+    const user =
+        JSON.parse(localStorage.getItem("portfolioUser"));
+
+
+    if (loggedIn !== "true" || !user) {
+
+        window.location.href = "login.html";
+
+    } else {
+
+        profileName.textContent = user.name;
+
+        document.getElementById(
+            "profileEmail"
+        ).textContent = user.email;
+
+
+        document.getElementById(
+            "profileAvatar"
+        ).textContent =
+            user.name.charAt(0).toUpperCase();
+
+    }
+
+}
+
+
+/* ---------- LOGOUT ---------- */
+
+const logoutButton =
+    document.getElementById("logoutButton");
+
+if (logoutButton) {
+
+    logoutButton.addEventListener("click", () => {
+
+        localStorage.removeItem(
+            "portfolioLoggedIn"
+        );
+
+        window.location.href = "index.html";
+
+    });
+
+}
+
+
+/* ---------- DELETE ACCOUNT ---------- */
+
+const deleteAccount =
+    document.getElementById("deleteAccount");
+
+if (deleteAccount) {
+
+    deleteAccount.addEventListener("click", () => {
+
+        const confirmation =
+            confirm(
+                "Вы действительно хотите удалить аккаунт?"
+            );
+
+
+        if (!confirmation) {
+            return;
+        }
+
+
+        localStorage.removeItem("portfolioUser");
+
+        localStorage.removeItem("portfolioLoggedIn");
+
+
+        window.location.href = "index.html";
+
+    });
+
+}
