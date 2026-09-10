@@ -1,89 +1,494 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Официальный сайт</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <script src="https://cdn.tailwindcss.com"></script>
+    <title>ESKENDEROV — Портфолио</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: black;
-      color: white;
-      overflow-x: hidden;
-    }
+    <meta
+        name="description"
+        content="Персональное портфолио ESKENDEROV. Проекты, навыки и контактная информация."
+    >
 
-    .blob {
-      position: absolute;
-      width: 500px;
-      height: 500px;
-      filter: blur(120px);
-      opacity: 0.4;
-      border-radius: 50%;
-      animation: float 6s ease-in-out infinite;
-    }
-
-    @keyframes float {
-      0% { transform: translateY(0px); }
-      50% { transform: translateY(-30px); }
-      100% { transform: translateY(0px); }
-    }
-
-    .btn {
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      transform: scale(1.05);
-    }
-  </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- фон -->
-<div class="blob" style="background: cyan; top: 0; left: 0;"></div>
-<div class="blob" style="background: purple; bottom: 0; right: 0;"></div>
+    <!-- ================= HEADER ================= -->
 
-<!-- контент -->
-<div style="position: relative; z-index: 10; padding: 40px;">
+    <header class="header" id="header">
+        <div class="container header-container">
 
-  <h1 style="font-size: 40px; color: cyan;">
-    Официальный сайт
-  </h1>
+            <a href="#home" class="logo">
+                ESKENDEROV<span>.</span>
+            </a>
 
-  <p style="color: #aaa; max-width: 500px;">
-    Персональный сайт с информацией об авторе
-  </p>
+            <nav class="nav" id="nav">
+                <a href="#home" class="nav-link active">Главная</a>
+                <a href="#about" class="nav-link">Обо мне</a>
+                <a href="#projects" class="nav-link">Проекты</a>
+                <a href="#contact" class="nav-link">Контакты</a>
+                <a href="login.html" class="nav-login">Личный кабинет</a>
+            </nav>
 
-  <hr style="margin: 30px 0; opacity: 0.2;" />
+            <button class="menu-button" id="menuButton" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-  <h2>Автор:</h2>
+        </div>
+    </header>
 
-  <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 20px;">
-    <h3 style="color: cyan;">Эскендеров Эмируллах Габибулахович</h3>
-    <p>Студент ДГУНХ</p>
-    <p>📞 +7 (928) 218-55-70</p>
-  </div>
 
-  <div style="margin-top: 30px; display: flex; gap: 15px; flex-wrap: wrap;">
+    <!-- ================= HERO ================= -->
 
-    <a class="btn" href="https://t.me/USERNAME"
-       style="background: cyan; color: black; padding: 12px 20px; border-radius: 12px; text-decoration: none;">
-      Telegram
-    </a>
+    <main>
 
-    <a class="btn" href="https://wa.me/79282185570"
-       style="background: green; color: white; padding: 12px 20px; border-radius: 12px; text-decoration: none;">
-      WhatsApp
-    </a>
+        <section class="hero" id="home">
 
-  </div>
+            <div class="hero-background"></div>
 
-</div>
+            <div class="container hero-container">
+
+                <div class="hero-content reveal">
+
+                    <p class="hero-small">
+                        HELLO, I'M
+                    </p>
+
+                    <h1>
+                        ESKENDEROV<span>.</span>
+                    </h1>
+
+                    <h2>
+                        Создаю современные
+                        <span>цифровые решения.</span>
+                    </h2>
+
+                    <p class="hero-description">
+                        Веб-разработка, дизайн и создание удобных
+                        цифровых продуктов с вниманием к каждой детали.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#projects" class="button button-primary">
+                            Мои проекты
+                        </a>
+
+                        <a href="#contact" class="button button-secondary">
+                            Связаться
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="hero-visual reveal">
+
+                    <div class="circle circle-large"></div>
+                    <div class="circle circle-small"></div>
+
+                    <div class="hero-card">
+                        <span class="hero-card-number">01</span>
+
+                        <div class="hero-card-line"></div>
+
+                        <p>
+                            DESIGN<br>
+                            & DEVELOPMENT
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <a href="#about" class="scroll-down">
+                <span>SCROLL</span>
+                <div class="scroll-line"></div>
+            </a>
+
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+
+        <section class="section about" id="about">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+                    <p class="section-number">01 / ABOUT</p>
+
+                    <h2>
+                        Немного<br>
+                        <span>обо мне.</span>
+                    </h2>
+                </div>
+
+                <div class="about-grid">
+
+                    <div class="about-image reveal">
+
+                        <div class="image-placeholder">
+                            <span>YOUR<br>PHOTO</span>
+                        </div>
+
+                        <div class="image-decoration"></div>
+
+                    </div>
+
+                    <div class="about-content reveal">
+
+                        <p class="about-intro">
+                            Я создаю сайты и цифровые продукты,
+                            которые объединяют современный дизайн,
+                            удобство и функциональность.
+                        </p>
+
+                        <p>
+                            Мне нравится работать над проектами от идеи
+                            до готового результата. Особое внимание уделяю
+                            структуре интерфейса, скорости работы и
+                            пользовательскому опыту.
+                        </p>
+
+                        <div class="skills">
+
+                            <div class="skill">
+                                <div class="skill-header">
+                                    <span>HTML / CSS</span>
+                                    <span>95%</span>
+                                </div>
+
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="--progress: 95%"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <div class="skill-header">
+                                    <span>JavaScript</span>
+                                    <span>85%</span>
+                                </div>
+
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="--progress: 85%"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <div class="skill-header">
+                                    <span>UI / UX Design</span>
+                                    <span>80%</span>
+                                </div>
+
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="--progress: 80%"></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROJECTS ================= -->
+
+        <section class="section projects" id="projects">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <p class="section-number">02 / PROJECTS</p>
+
+                    <h2>
+                        Избранные<br>
+                        <span>проекты.</span>
+                    </h2>
+
+                </div>
+
+                <div class="projects-grid">
+
+                    <!-- PROJECT 1 -->
+
+                    <article class="project-card reveal">
+
+                        <div class="project-image project-image-1">
+                            <span>01</span>
+                        </div>
+
+                        <div class="project-info">
+
+                            <p class="project-category">
+                                WEB DEVELOPMENT
+                            </p>
+
+                            <h3>
+                                Personal Website
+                            </h3>
+
+                            <p>
+                                Современный адаптивный сайт
+                                с минималистичным интерфейсом.
+                            </p>
+
+                            <a href="#" class="project-link">
+                                Смотреть проект →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 2 -->
+
+                    <article class="project-card reveal">
+
+                        <div class="project-image project-image-2">
+                            <span>02</span>
+                        </div>
+
+                        <div class="project-info">
+
+                            <p class="project-category">
+                                UI / UX DESIGN
+                            </p>
+
+                            <h3>
+                                Digital Interface
+                            </h3>
+
+                            <p>
+                                Интерфейс цифрового продукта
+                                с акцентом на простоту использования.
+                            </p>
+
+                            <a href="#" class="project-link">
+                                Смотреть проект →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 3 -->
+
+                    <article class="project-card reveal">
+
+                        <div class="project-image project-image-3">
+                            <span>03</span>
+                        </div>
+
+                        <div class="project-info">
+
+                            <p class="project-category">
+                                E-COMMERCE
+                            </p>
+
+                            <h3>
+                                Online Store
+                            </h3>
+
+                            <p>
+                                Концепция современного интернет-магазина
+                                с удобной навигацией.
+                            </p>
+
+                            <a href="#" class="project-link">
+                                Смотреть проект →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 4 -->
+
+                    <article class="project-card reveal">
+
+                        <div class="project-image project-image-4">
+                            <span>04</span>
+                        </div>
+
+                        <div class="project-info">
+
+                            <p class="project-category">
+                                APPLICATION
+                            </p>
+
+                            <h3>
+                                Dashboard
+                            </h3>
+
+                            <p>
+                                Панель управления с визуализацией
+                                информации и статистики.
+                            </p>
+
+                            <a href="#" class="project-link">
+                                Смотреть проект →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTACT ================= -->
+
+        <section class="section contact" id="contact">
+
+            <div class="container">
+
+                <div class="contact-grid">
+
+                    <div class="contact-info reveal">
+
+                        <p class="section-number">
+                            03 / CONTACT
+                        </p>
+
+                        <h2>
+                            Давайте<br>
+                            <span>поговорим.</span>
+                        </h2>
+
+                        <p class="contact-description">
+                            Есть идея или интересный проект?
+                            Напишите мне, и мы обсудим детали.
+                        </p>
+
+                        <div class="contact-details">
+
+                            <div>
+                                <span>Email</span>
+                                <a href="mailto:hello@example.com">
+                                    hello@example.com
+                                </a>
+                            </div>
+
+                            <div>
+                                <span>Location</span>
+                                <p>Europe</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <form class="contact-form reveal" id="contactForm">
+
+                        <div class="form-group">
+                            <label for="name">
+                                Ваше имя
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Введите имя"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">
+                                Email
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="example@mail.com"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">
+                                Сообщение
+                            </label>
+
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="6"
+                                placeholder="Расскажите о вашем проекте..."
+                                required
+                            ></textarea>
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="button button-primary form-button"
+                        >
+                            Отправить сообщение
+                            <span>→</span>
+                        </button>
+
+                        <p
+                            class="form-message"
+                            id="formMessage"
+                        ></p>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container footer-container">
+
+            <a href="#home" class="logo">
+                ESKENDEROV<span>.</span>
+            </a>
+
+            <p>
+                © <span id="year"></span> ESKENDEROV. All rights reserved.
+            </p>
+
+            <a href="#home" class="back-top">
+                ↑
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
 
 </body>
 </html>
