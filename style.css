@@ -875,3 +875,221 @@ textarea {
         gap: 20px;
     }
 }
+/* =====================================================
+   AUTH PAGES
+===================================================== */
+
+.auth-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 20px 60px;
+}
+
+.auth-box {
+    width: min(500px, 100%);
+    padding: 50px;
+    background: #111;
+    border: 1px solid var(--border);
+    animation: authAppear 0.8s ease forwards;
+}
+
+.auth-box h1 {
+    font-size: clamp(45px, 7vw, 70px);
+    line-height: 0.95;
+    letter-spacing: -3px;
+    margin-bottom: 50px;
+}
+
+.auth-box h1 span {
+    color: var(--red);
+}
+
+.auth-button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.auth-message {
+    min-height: 20px;
+    margin-top: 20px;
+    font-size: 13px;
+    color: var(--red);
+}
+
+.auth-switch {
+    margin-top: 30px;
+    color: var(--gray);
+    font-size: 13px;
+    text-align: center;
+}
+
+.auth-switch a {
+    color: white;
+    transition: 0.3s;
+}
+
+.auth-switch a:hover {
+    color: var(--red);
+}
+
+@keyframes authAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =====================================================
+   PROFILE
+===================================================== */
+
+.profile-page {
+    min-height: 100vh;
+    padding: 150px 0 100px;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+.profile-header h1 {
+    font-size: clamp(55px, 8vw, 100px);
+    line-height: 0.9;
+    letter-spacing: -5px;
+}
+
+.profile-header h1 span {
+    color: var(--gray);
+}
+
+.profile-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid var(--red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    font-weight: 700;
+    color: var(--red);
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.profile-card {
+    background: #111;
+    border: 1px solid var(--border);
+    padding: 40px;
+}
+
+.profile-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--gray);
+    margin-bottom: 35px;
+}
+
+.profile-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.profile-row span {
+    color: var(--gray);
+}
+
+.status {
+    color: #7ee787;
+}
+
+.profile-action {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    border: 0;
+    border-bottom: 1px solid var(--border);
+    background: transparent;
+    color: white;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.profile-action:hover {
+    color: var(--red);
+    padding-left: 10px;
+}
+
+.profile-action.danger {
+    color: #e53935;
+}
+
+.logout-button {
+    background: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   MOBILE AUTH / PROFILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .auth-box {
+        padding: 30px 25px;
+    }
+
+    .profile-header {
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .profile-avatar {
+        width: 90px;
+        height: 90px;
+        font-size: 35px;
+        flex-shrink: 0;
+    }
+
+    .profile-header h1 {
+        letter-spacing: -3px;
+    }
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-card {
+        padding: 25px;
+    }
+
+    .profile-row {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+}
