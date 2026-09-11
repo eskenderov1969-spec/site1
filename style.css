@@ -2329,7 +2329,240 @@ footer,
     }
 
 }
+/* =====================================================
+   FINAL LIGHT THEME FIX
+===================================================== */
 
+body.light-theme {
+    background: #f4f4f4;
+    color: #111111;
+}
+
+/* HEADER */
+
+body.light-theme .header {
+    background: rgba(244, 244, 244, 0.92);
+}
+
+body.light-theme .header.scrolled {
+    background: rgba(244, 244, 244, 0.92);
+    border-bottom-color: rgba(0, 0, 0, 0.12);
+}
+
+body.light-theme .nav-link {
+    color: #666666;
+}
+
+body.light-theme .nav-link:hover,
+body.light-theme .nav-link.active {
+    color: #111111;
+}
+
+body.light-theme .nav-login {
+    color: #111111;
+}
+
+body.light-theme .nav-login:hover {
+    background: #111111;
+    color: #ffffff;
+}
+
+body.light-theme .menu-button span {
+    background: #111111;
+}
+
+
+/* HERO */
+
+body.light-theme .hero {
+    background: #f4f4f4;
+}
+
+body.light-theme .hero h1,
+body.light-theme .hero h2 {
+    color: #111111;
+}
+
+body.light-theme .hero h2 span {
+    color: #666666;
+}
+
+body.light-theme .hero-description {
+    color: #666666;
+}
+
+body.light-theme .button-primary {
+    background: #111111;
+    color: #ffffff;
+}
+
+body.light-theme .button-primary:hover {
+    background: #d62828;
+    color: #ffffff;
+}
+
+body.light-theme .button-secondary {
+    color: #111111;
+    border-color: rgba(0, 0, 0, 0.15);
+}
+
+body.light-theme .button-secondary:hover {
+    background: #111111;
+    color: #ffffff;
+}
+
+body.light-theme .circle {
+    border-color: rgba(0, 0, 0, 0.12);
+}
+
+body.light-theme .hero-card {
+    background: rgba(255, 255, 255, 0.7);
+    border-color: rgba(0, 0, 0, 0.12);
+}
+
+body.light-theme .hero-card-line {
+    background: rgba(0, 0, 0, 0.12);
+}
+
+
+/* ABOUT */
+
+body.light-theme .about {
+    background: #ffffff;
+}
+
+body.light-theme .about-intro h3,
+body.light-theme .about-block-title,
+body.light-theme .skill-item strong {
+    color: #111111;
+}
+
+body.light-theme .about-intro p:not(.about-role),
+body.light-theme .about-block > p,
+body.light-theme .about-goal p {
+    color: #666666;
+}
+
+body.light-theme .skill-item {
+    border-bottom-color: rgba(0, 0, 0, 0.08);
+}
+
+body.light-theme .learning-tags span {
+    color: #666666;
+    border-color: rgba(0, 0, 0, 0.12);
+}
+
+body.light-theme .learning-tags span:hover {
+    color: #111111;
+}
+
+
+/* AI DEVELOPMENT */
+
+body.light-theme .ai-development {
+    background: #f4f4f4;
+}
+
+body.light-theme .ai-intro h3,
+body.light-theme .ai-item-content h3 {
+    color: #111111;
+}
+
+body.light-theme .ai-intro p:not(.ai-role),
+body.light-theme .ai-item-content p {
+    color: #666666;
+}
+
+body.light-theme .ai-list,
+body.light-theme .ai-item,
+body.light-theme .ai-bottom {
+    border-color: rgba(0, 0, 0, 0.12);
+}
+
+body.light-theme .ai-flow strong {
+    color: #111111;
+}
+
+body.light-theme .ai-flow i {
+    color: #999999;
+}
+
+
+/* CONTACT */
+
+body.light-theme .contact {
+    background: #ffffff;
+}
+
+body.light-theme .contact-info h2,
+body.light-theme .contact-cta h3 {
+    color: #111111;
+}
+
+body.light-theme .contact-description,
+body.light-theme .contact-cta > p:not(.contact-cta-label) {
+    color: #666666;
+}
+
+body.light-theme .contact-details {
+    border-color: rgba(0, 0, 0, 0.12);
+}
+
+body.light-theme .contact-item {
+    border-color: rgba(0, 0, 0, 0.12);
+    background: rgba(0, 0, 0, 0.02);
+}
+
+body.light-theme .contact-item-content a {
+    color: #111111;
+}
+
+body.light-theme .contact-item-content a:hover {
+    color: #d62828;
+}
+
+body.light-theme .contact-location {
+    border-color: rgba(0, 0, 0, 0.12);
+}
+
+body.light-theme .location-value {
+    color: #111111;
+}
+
+body.light-theme .contact-actions {
+    border-color: rgba(0, 0, 0, 0.12);
+}
+
+body.light-theme .contact-action {
+    color: #111111;
+    border-color: rgba(0, 0, 0, 0.12);
+}
+
+body.light-theme .contact-action:hover {
+    color: #d62828;
+}
+
+
+/* FOOTER */
+
+body.light-theme .footer {
+    background: #f4f4f4;
+    border-color: rgba(0, 0, 0, 0.12);
+}
+
+body.light-theme .footer p {
+    color: #666666;
+}
+
+body.light-theme .back-top {
+    color: #111111;
+    border-color: rgba(0, 0, 0, 0.12);
+}
+
+body.light-theme .back-top:hover {
+    background: #111111;
+    color: #ffffff;
+}
 
 
 
