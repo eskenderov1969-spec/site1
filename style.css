@@ -1621,13 +1621,12 @@ textarea {
         height: 280px;
     }
 }
-/* =========================
+/* =====================================================
    AI DEVELOPMENT
-========================= */
+===================================================== */
 
 .ai-development {
-    padding: 120px 0;
-    border-top: 1px solid var(--border);
+    background: #0a0a0a;
 }
 
 .ai-main {
@@ -1638,18 +1637,18 @@ textarea {
 }
 
 .ai-intro {
-    max-width: 500px;
+    max-width: 520px;
 }
 
 .ai-role {
-    margin-bottom: 20px;
+    margin-bottom: 14px;
     color: var(--gray);
     font-size: 12px;
     letter-spacing: 4px;
     text-transform: uppercase;
 }
 
-.ai-intro h2 {
+.ai-intro h3 {
     margin: 0 0 30px;
     font-size: 46px;
     font-weight: 400;
@@ -1657,12 +1656,13 @@ textarea {
     letter-spacing: -1px;
 }
 
-.ai-intro h2 span {
+.ai-intro h3 span {
     color: var(--red);
 }
 
-.ai-intro > p:last-child {
-    max-width: 480px;
+.ai-intro p:not(.ai-role) {
+    max-width: 650px;
+    margin-bottom: 20px;
     color: var(--gray);
     font-size: 15px;
     line-height: 1.9;
@@ -1674,7 +1674,7 @@ textarea {
 
 .ai-item {
     display: grid;
-    grid-template-columns: 55px 1fr;
+    grid-template-columns: 50px 1fr;
     gap: 25px;
     padding: 30px 0;
     border-bottom: 1px solid var(--border);
@@ -1708,12 +1708,12 @@ textarea {
     align-items: center;
     justify-content: space-between;
     gap: 40px;
+
     margin-top: 70px;
     padding-top: 30px;
-    border-top: 1px solid var(--border);
-}
 
-.ai-bottom-label {
+    border-top: 1px solid var(--border);
+
     color: var(--gray);
     font-size: 11px;
     letter-spacing: 3px;
@@ -1723,9 +1723,6 @@ textarea {
     display: flex;
     align-items: center;
     gap: 18px;
-    color: var(--gray);
-    font-size: 11px;
-    letter-spacing: 3px;
 }
 
 .ai-flow i {
@@ -1739,7 +1736,9 @@ textarea {
 }
 
 
-/* MOBILE */
+/* =========================
+   AI MOBILE
+========================= */
 
 @media (max-width: 900px) {
 
@@ -1760,19 +1759,19 @@ textarea {
 
 }
 
-@media (max-width: 600px) {
 
-    .ai-development {
-        padding: 90px 0;
-    }
+@media (max-width: 600px) {
 
     .ai-main {
         margin-top: 50px;
     }
 
-    .ai-intro h2 {
-        font-size: 38px;
-        letter-spacing: -1px;
+    .ai-intro h3 {
+        font-size: 32px;
+    }
+
+    .ai-intro p:not(.ai-role) {
+        font-size: 14px;
     }
 
     .ai-item {
