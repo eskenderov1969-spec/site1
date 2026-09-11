@@ -462,3 +462,33 @@ if (deleteAccount) {
     });
 
 }
+
+/* =====================================================
+   THEME TOGGLE — DAY / NIGHT
+===================================================== */
+
+const themeToggle = document.getElementById("themeToggle");
+
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme === "light") {
+    document.body.classList.add("light-theme");
+}
+
+if (themeToggle) {
+
+    themeToggle.addEventListener("click", () => {
+
+        document.body.classList.toggle("light-theme");
+
+        const isLight =
+            document.body.classList.contains("light-theme");
+
+        localStorage.setItem(
+            "theme",
+            isLight ? "light" : "dark"
+        );
+
+    });
+
+}
