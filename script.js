@@ -438,18 +438,17 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.classList.add("light-theme");
     }
 
-
     // Переключение темы
     themeToggle.addEventListener("click", () => {
 
         document.body.classList.toggle("light-theme");
 
-        const lightMode =
+        const isLight =
             document.body.classList.contains("light-theme");
 
         localStorage.setItem(
             "site-theme",
-            lightMode ? "light" : "dark"
+            isLight ? "light" : "dark"
         );
 
     });
