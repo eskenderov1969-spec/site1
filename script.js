@@ -492,3 +492,29 @@ if (themeToggle) {
     });
 
 }
+document.addEventListener("DOMContentLoaded", function () {
+
+    const themeToggle = document.getElementById("themeToggle");
+
+    console.log("Кнопка темы:", themeToggle);
+
+    if (!themeToggle) {
+        console.log("ОШИБКА: кнопка themeToggle не найдена");
+        return;
+    }
+
+    themeToggle.addEventListener("click", function () {
+
+        console.log("Кнопка нажата");
+
+        document.body.classList.toggle("light-theme");
+
+        if (document.body.classList.contains("light-theme")) {
+            localStorage.setItem("site-theme", "light");
+        } else {
+            localStorage.setItem("site-theme", "dark");
+        }
+
+    });
+
+});
