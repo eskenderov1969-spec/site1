@@ -1999,10 +1999,36 @@ textarea {
         font-size: 14px;
     }
 
-    .contact-item-content {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 10px;
+.contact-item-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    text-align: center;
+}
+
+.contact-item-content span {
+    min-width: 90px;
+    color: var(--gray);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+.contact-item-content a {
+    min-width: 230px;
+    color: var(--white);
+    font-size: 14px;
+    text-decoration: none;
+    text-align: left;
+    transition: color 0.3s ease;
+}
+
+.contact-item-content a:hover {
+    color: var(--red);
+}
+
     }
 
     .contact-location {
