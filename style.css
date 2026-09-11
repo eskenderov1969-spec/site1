@@ -1999,35 +1999,63 @@ textarea {
         font-size: 14px;
     }
 
-.contact-item-content {
+   .contact-item {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 35px;
+
+    min-height: 155px;
+
+    padding: 30px;
+
+    border-bottom: 1px solid var(--border);
+}
+.contact-item-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    width: 100%;
+
     text-align: center;
 }
 
 .contact-item-content span {
-    min-width: 90px;
+    display: block;
+
+    width: 100%;
+
     color: var(--gray);
     font-size: 11px;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     text-transform: uppercase;
-    text-align: right;
+
+    text-align: center;
 }
 
 .contact-item-content a {
-    min-width: 230px;
+    display: block;
+
+    width: 100%;
+
     color: var(--white);
-    font-size: 14px;
+    font-size: 15px;
+    font-weight: 400;
+
     text-decoration: none;
-    text-align: left;
+
+    text-align: center;
+
     transition: color 0.3s ease;
 }
 
 .contact-item-content a:hover {
     color: var(--red);
 }
+
 
     }
 
