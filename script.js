@@ -121,50 +121,6 @@ window.addEventListener("scroll", () => {
 });
 
 
-/* =====================================================
-   CONTACT FORM
-===================================================== */
-
-const contactForm = document.getElementById("contactForm");
-const formMessage = document.getElementById("formMessage");
-
-contactForm.addEventListener("submit", (event) => {
-
-    event.preventDefault();
-
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const message = document.getElementById("message").value.trim();
-
-
-    if (!name || !email || !message) {
-
-        formMessage.textContent =
-            "Пожалуйста, заполните все поля.";
-
-        formMessage.style.color = "#e53935";
-
-        return;
-    }
-
-
-    formMessage.textContent =
-        "Сообщение успешно подготовлено!";
-
-    formMessage.style.color = "#7ee787";
-
-
-    contactForm.reset();
-
-
-    setTimeout(() => {
-
-        formMessage.textContent = "";
-
-    }, 5000);
-
-});
-
 
 /* =====================================================
    CURRENT YEAR
@@ -464,31 +420,38 @@ if (deleteAccount) {
 }
 
 /* =====================================================
-   THEME TOGGLE — DAY / NIGHT
+   THEME SWITCHER — DAY / NIGHT
 ===================================================== */
 
-const themeToggle = document.getElementById("themeToggle");
+document.addEventListener("DOMContentLoaded", () => {
 
-const savedTheme = localStorage.getItem("theme");
+    const themeToggle = document.getElementById("themeToggle");
 
-if (savedTheme === "light") {
-    document.body.classList.add("light-theme");
-}
+    if (!themeToggle) {
+        return;
+    }
 
-if (themeToggle) {
+    // Загружаем сохранённую тему
+    const savedTheme = localStorage.getItem("site-theme");
 
+    if (savedTheme === "light") {
+        document.body.classList.add("light-theme");
+    }
+
+
+    // Переключение темы
     themeToggle.addEventListener("click", () => {
 
         document.body.classList.toggle("light-theme");
 
-        const isLight =
+        const lightMode =
             document.body.classList.contains("light-theme");
 
         localStorage.setItem(
-            "theme",
-            isLight ? "light" : "dark"
+            "site-theme",
+            lightMode ? "light" : "dark"
         );
 
     });
 
-}
+});
