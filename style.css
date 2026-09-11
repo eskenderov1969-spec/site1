@@ -637,18 +637,6 @@ textarea {
 
 /* FORM */
 
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
 .form-group label {
     font-size: 11px;
     color: var(--gray);
@@ -678,16 +666,6 @@ textarea {
     color: #444;
 }
 
-.form-button {
-    border: 0;
-    align-self: flex-start;
-}
-
-.form-message {
-    min-height: 20px;
-    font-size: 13px;
-    color: #7ee787;
-}
 
 
 /* =====================================================
@@ -1792,3 +1770,258 @@ textarea {
     }
 
 }
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact {
+    background: #0d0d0d;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 120px;
+    align-items: start;
+}
+
+
+/* -----------------------------------------------------
+   LEFT SIDE
+----------------------------------------------------- */
+
+.contact-info {
+    max-width: 560px;
+}
+
+.contact-info h2 {
+    margin: 25px 0 30px;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -2px;
+}
+
+.contact-info h2 span {
+    color: var(--red);
+}
+
+.contact-description {
+    max-width: 500px;
+    margin-bottom: 50px;
+    color: var(--gray);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* -----------------------------------------------------
+   CONTACT DETAILS
+----------------------------------------------------- */
+
+.contact-details {
+    border-top: 1px solid var(--border);
+}
+
+.contact-item {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.contact-item-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.contact-item-content span,
+.location-label {
+    color: var(--gray);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.contact-item-content a {
+    color: var(--white);
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-item-content a:hover {
+    color: var(--red);
+}
+
+.contact-location {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0;
+}
+
+.location-value {
+    color: var(--white);
+    font-size: 14px;
+}
+
+
+/* -----------------------------------------------------
+   RIGHT SIDE
+----------------------------------------------------- */
+
+.contact-cta {
+    padding-top: 90px;
+    max-width: 620px;
+}
+
+.contact-cta-label {
+    margin-bottom: 20px;
+    color: var(--gray);
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.contact-cta h3 {
+    margin: 0 0 25px;
+    color: var(--white);
+    font-size: 46px;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.contact-cta h3 span {
+    color: var(--red);
+}
+
+.contact-cta > p:not(.contact-cta-label) {
+    max-width: 500px;
+    margin-bottom: 45px;
+    color: var(--gray);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+
+/* -----------------------------------------------------
+   CONTACT ACTIONS
+----------------------------------------------------- */
+
+.contact-actions {
+    border-top: 1px solid var(--border);
+}
+
+.contact-action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 22px 0;
+
+    border-bottom: 1px solid var(--border);
+
+    color: var(--white);
+    text-decoration: none;
+
+    transition:
+        padding-left 0.3s ease,
+        color 0.3s ease;
+}
+
+.contact-action span {
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.contact-action strong {
+    color: var(--red);
+    font-size: 20px;
+    font-weight: 400;
+
+    transition: transform 0.3s ease;
+}
+
+.contact-action:hover {
+    padding-left: 12px;
+    color: var(--red);
+}
+
+.contact-action:hover strong {
+    transform: translateX(6px);
+}
+
+
+/* -----------------------------------------------------
+   REMOVE OLD FORM STYLES
+----------------------------------------------------- */
+
+/*
+   Старые стили .contact-form,
+   .form-group, .form-button,
+   .form-message и т.д. больше
+   не используются, потому что форма
+   отправки сообщения удалена из HTML.
+*/
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 70px;
+    }
+
+    .contact-cta {
+        padding-top: 0;
+        max-width: 700px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .contact-info h2 {
+        font-size: 44px;
+        letter-spacing: -1px;
+    }
+
+    .contact-description {
+        margin-bottom: 40px;
+        font-size: 14px;
+    }
+
+    .contact-item-content {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contact-location {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contact-cta h3 {
+        font-size: 34px;
+    }
+
+    .contact-cta > p:not(.contact-cta-label) {
+        font-size: 14px;
+    }
+
+    .contact-action {
+        padding: 20px 0;
+    }
+
+}
+
