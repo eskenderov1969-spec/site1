@@ -1621,3 +1621,131 @@ textarea {
         height: 280px;
     }
 }
+/* =========================
+   AI DEVELOPMENT
+========================= */
+
+.ai-development {
+    padding: 140px 0;
+    border-top: 1px solid var(--border);
+}
+
+.ai-heading {
+    max-width: 850px;
+    margin: 70px 0 90px;
+}
+
+.ai-heading h2 {
+    margin: 0 0 30px;
+    font-size: clamp(42px, 6vw, 76px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -3px;
+}
+
+.ai-heading h2 span {
+    color: var(--red);
+}
+
+.ai-heading p {
+    max-width: 650px;
+    color: var(--gray);
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.ai-process {
+    border-top: 1px solid var(--border);
+}
+
+.ai-item {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 50px;
+    padding: 45px 0;
+    border-bottom: 1px solid var(--border);
+    transition: padding-left 0.4s ease;
+}
+
+.ai-item:hover {
+    padding-left: 20px;
+}
+
+.ai-number {
+    color: var(--red);
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.ai-content h3 {
+    margin: 0 0 15px;
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.ai-content p {
+    max-width: 650px;
+    margin: 0;
+    color: var(--gray);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.ai-flow {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-top: 80px;
+    color: var(--gray);
+    font-size: 12px;
+    letter-spacing: 4px;
+}
+
+.ai-flow i {
+    color: #555;
+    font-size: 18px;
+    font-style: normal;
+}
+
+.ai-flow strong {
+    color: var(--white);
+    font-weight: 400;
+}
+
+@media (max-width: 600px) {
+
+    .ai-development {
+        padding: 90px 0;
+    }
+
+    .ai-heading {
+        margin: 50px 0 60px;
+    }
+
+    .ai-heading h2 {
+        font-size: 42px;
+        letter-spacing: -2px;
+    }
+
+    .ai-item {
+        grid-template-columns: 50px 1fr;
+        gap: 20px;
+        padding: 35px 0;
+    }
+
+    .ai-item:hover {
+        padding-left: 0;
+    }
+
+    .ai-content h3 {
+        font-size: 15px;
+    }
+
+    .ai-flow {
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 55px;
+    }
+}
